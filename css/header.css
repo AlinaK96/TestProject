@@ -10,14 +10,27 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 32px;
-  padding: 0 64px;
 }
 
-.name {
+.profile {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+.profile img {
+  height: 45px;
+  width: 45px;
+}
+.profile .name {
+  margin-left: 24px;
+}
+.profile .name p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 20px;
+}
+.profile .name p:last-child {
+  color: #7D7D7D;
 }
 
 /*burger menu*/

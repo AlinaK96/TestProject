@@ -8,12 +8,30 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 32px;
-    padding: 0 64px;
 }
 
-.name{
+.profile{
     display: flex;
+
+    img{
+        @include size (45px, 45px);
+    }
+
+    .name{
+        margin-left: 24px;
+
+        p {
+            margin: 0;
+            @include fontSize(14px , 20px)
+        }
+
+        
+    }
+
+    .name p:last-child{
+        color: $greyText;
+    }
+
 }
 
 /*burger menu*/
