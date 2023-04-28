@@ -52,6 +52,7 @@
 .burger-menu.active:before {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
+  background-color: yellow;
 }
 
 .burger-menu span.active {
@@ -62,4 +63,5 @@
   margin: 0;
   -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
+  background-color: yellow;
 }
