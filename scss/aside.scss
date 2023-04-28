@@ -1,0 +1,22 @@
+@import "variables";
+@import "mixins";
+
+.asideContent{
+    position: fixed;
+    a{
+        display: block;
+        @include size (20px, 147px);
+        @include fontSize (14px, 20px);
+        margin-bottom: 16px;
+        text-decoration: none;
+        color: $greyText;
+    }
+
+    a:hover{
+        color: $blackFont;
+    }
+
+    a:active{
+        color: $visitedLink;
+    }
+}

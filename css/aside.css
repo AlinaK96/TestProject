@@ -1,0 +1,19 @@
+.asideContent {
+  position: fixed;
+}
+.asideContent a {
+  display: block;
+  height: 20px;
+  width: 147px;
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom: 16px;
+  text-decoration: none;
+  color: #7D7D7D;
+}
+.asideContent a:hover {
+  color: #1B1B1B;
+}
+.asideContent a:active {
+  color: #3E29E3;
+}

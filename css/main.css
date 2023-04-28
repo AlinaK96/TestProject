@@ -12,8 +12,8 @@ body {
   height: 100vh;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 376px 32px 1fr;
-  grid-template-columns: 376px 1fr;
+  -ms-grid-columns: 300px 32px 1fr;
+  grid-template-columns: 300px 1fr;
   -ms-grid-rows: 120px 32px 1fr 32px 120px;
   grid-template-rows: 120px 1fr 120px;
   grid-gap: 32px;
@@ -31,6 +31,7 @@ aside {
   -ms-grid-row: 3;
   -ms-grid-column: 1;
   grid-area: aside;
+  margin-right: 25px;
 }
 
 main {
