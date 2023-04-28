@@ -1,16 +1,37 @@
 @import "variables";
 @import "mixins";
 
-html{
-    width: 100%;
-    overflow-x: hidden;
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    padding-right: 0px;
-}
+html {
+    height: 100vh;
 
+}
 body{
     font-family: $font;
-    
+    height: 100vh;
+    margin: 32px 64px;
+
+}
+
+.container{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 376px 1fr;
+    grid-template-rows: 120px 1fr 120px;
+    grid-gap: 32px;
+    grid-template-areas:
+        "header header"
+        "aside main"
+        "footer footer";
+}
+
+header {
+    grid-area: header;
+}
+
+aside {
+    grid-area: aside;
+}
+
+main {
+    grid-area: main;
 }

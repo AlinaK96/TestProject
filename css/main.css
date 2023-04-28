@@ -1,12 +1,40 @@
 html {
-  width: 100%;
-  overflow-x: hidden;
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  padding-right: 0px;
+  height: 100vh;
 }
 
 body {
   font-family: Graphik;
+  height: 100vh;
+  margin: 32px 64px;
+}
+
+.container {
+  height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 376px 32px 1fr;
+  grid-template-columns: 376px 1fr;
+  -ms-grid-rows: 120px 32px 1fr 32px 120px;
+  grid-template-rows: 120px 1fr 120px;
+  grid-gap: 32px;
+      grid-template-areas: "header header" "aside main" "footer footer";
+}
+
+header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: header;
+}
+
+aside {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: aside;
+}
+
+main {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+  grid-area: main;
 }
