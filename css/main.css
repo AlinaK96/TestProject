@@ -38,3 +38,10 @@ main {
   -ms-grid-column: 3;
   grid-area: main;
 }
+
+footer {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: footer;
+}
