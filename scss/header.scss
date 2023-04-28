@@ -1,0 +1,54 @@
+@import "variables";
+@import "mixins";
+
+
+
+.navigation{
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 32px;
+    padding: 0 64px;
+}
+
+.name{
+    display: flex;
+}
+
+/*burger menu*/
+
+.burger-menu{
+    display: block;
+    position: relative;
+    @include size (10px, 32px);
+    z-index: 3;
+}
+
+.burger-menu span{
+    transition: $transition;
+    position: absolute;
+    background-color: $blackFont;
+    @include size (1px, 24px);
+    margin: 6px 0 0 8px;
+}
+
+.burger-menu:before{
+content: '';
+    position: absolute;
+    @include size (2px, 32px);
+    transition: $transition;
+    background-color: $blackFont;
+}
+
+.burger-menu.active:before{
+    transform: rotate(45deg);
+}
+
+.burger-menu span.active{
+    transform: rotate(-45deg);
+    @include size (2px, 32px);
+    margin: 0;
+    transition: $transition;
+}
+

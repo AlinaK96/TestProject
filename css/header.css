@@ -1,0 +1,65 @@
+.navigation {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 32px;
+  padding: 0 64px;
+}
+
+.name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+/*burger menu*/
+.burger-menu {
+  display: block;
+  position: relative;
+  height: 10px;
+  width: 32px;
+  z-index: 3;
+}
+
+.burger-menu span {
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  position: absolute;
+  background-color: #1B1B1B;
+  height: 1px;
+  width: 24px;
+  margin: 6px 0 0 8px;
+}
+
+.burger-menu:before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 32px;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  background-color: #1B1B1B;
+}
+
+.burger-menu.active:before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.burger-menu span.active {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  height: 2px;
+  width: 32px;
+  margin: 0;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
