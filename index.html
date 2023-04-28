@@ -39,13 +39,137 @@
 
         <aside>
             <div class="asideContent">
-                <a href="">Напутственное слово</a>
+                <a href="#intro">Напутственное слово</a>
                 <a href="">Сетка</a>
                 <a href="">Типографика</a>
                 <a href="">UI</a>
             </div>
         </aside>
-        <main>lorem295</main>
+
+        <main>
+            <div>
+                <h1>Тестовое задание</h1>
+                <h2>Уровень: junior</h2>
+                <p  id="intro">Привет! Твоё тестовое задание — грамотно заверстать эту прекрасную страничку. В шапке страницы укажи своё ФИО, так всем будет удобнее. В менюхе под иконкой бургером мы хотели бы также видеть твои данные. Ну что, поехали?</p>
+            </div>
+
+            <div class="adaptive">
+                <h2>Сетка</h2>
+                <p>Задание предполагает адаптивную вёрстку. Используется 3 состояния в зависимости от устройства. Сетка «резиновая» — переменной ширины.</p>
+
+                <div class="desktop">
+                    <h3>Десктоп (1200+)</h3>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Контент</th>
+                                    <th>Колонок</th>
+                                    <th>Ширина колонки</th>
+                                    <th>Межколонник</th>
+                                </tr>
+                                <tr>
+                                    <td>1072–1312</td>
+                                    <td>12</td>
+                                    <td>60-80</td>
+                                    <td>32</td>
+                                </tr>
+                            </thead>
+                        </table>
+
+                        <img src="./img/png/dashboard.png" alt="Something went wrong" title="Сетка для десктопной версии">
+                </div>
+
+                <div class="desktop">
+                    <h3>Планшет (736+)</h3>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Контент</th>
+                                    <th>Колонок</th>
+                                    <th>Ширина колонки</th>
+                                    <th>Межколонник</th>
+                                </tr>
+                                <tr>
+                                    <td>672–928</td>
+                                    <td>8</td>
+                                    <td>56-88</td>
+                                    <td>32</td>
+                                </tr>
+                            </thead>
+                        </table>
+
+                        <img src="./img/png/tablet.png" alt="Something went wrong" title="Сетка для планшета">
+                </div>
+
+                <div class="desktop">
+                    <h3>Телефон (320+)</h3>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Контент</th>
+                                    <th>Колонок</th>
+                                    <th>Ширина колонки</th>
+                                    <th>Межколонник</th>
+                                </tr>
+                                <tr>
+                                    <td>296–424</td>
+                                    <td>4</td>
+                                    <td>56-88</td>
+                                    <td>24</td>
+                                </tr>
+                            </thead>
+                        </table>
+
+                        <img src="./img/png/mobile.png" alt="Something went wrong" title="Сетка для мобильной версии">
+                </div>
+            </div>
+
+            <div class="typography">
+                <h2>Типографика</h2>
+                <p>Используется шрифт Graphik. На телефонах стили типографики переопределяются</p>
+                <button>Десктоп</button>
+                <button>Телефон</button>
+                <hr>
+            </div>
+
+            <div class="UI">
+                <h2>UI</h2>
+                <h3>Текстовое поле</h3>
+                <input type="email" placeholder="E-mail">
+
+                <h3>Выпадающий список</h3>
+                <p>Компонент состоит из текстового поля и выпадающей подсказки</p>
+                <input type="text" name="city" list="cityname" placeholder="Выберите что-нибудь">
+                    <datalist id="cityname">
+                        <option value="Первый стул">
+                        <option value="Второй стул">
+                        <option value="Выбранный пункт">
+                        <option value="Теорема Эскобара">
+                    </datalist>
+
+                <h3>Кнопка</h3>
+                <button>Отправить</button>
+
+                <h3>Чекбокс, радиобаттон</h3>
+                    <div class="checkbox">
+                        <input type="checkbox" name="" id="" >Выбери меня
+                        <input type="checkbox" name="" id="">Выбери меня
+                        <input type="checkbox" name="" id="">Птица счастья завтрашнего дня
+                    </div>
+
+                    <div class="radio">
+                        <input type="radio" name="" id="">Пластмассовый мир победил
+                        <input type="radio" name="" id="">Макет оказался сильней
+                        <input type="radio" name="" id="">Последний кораблик остыл
+                    </div>
+
+                <h3>Аккордеон</h3>
+            </div>
+
+            
+
+
+        </main>
         <footer>
             <p>Победа! &#128540;</p>
         </footer>
