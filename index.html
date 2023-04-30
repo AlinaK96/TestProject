@@ -59,7 +59,7 @@
 
                 <div class="desktop">
                     <h3>Десктоп (1200+)</h3>
-                        <table>
+                        <table class="tableGrid">
                             <thead class="tableHeader">
                                 <tr>
                                     <td>Контент</td>
@@ -136,12 +136,41 @@
                 <button>Десктоп</button>
                 <button>Телефон</button>
                 <hr>
+                <div class="typographyInfo">
+                    <div class="left">
+                        <p>Заголовок H1, 48/56, bold</p>
+                        <p>Заголовок H2, 32/40, bold</p>
+                        <p>Заголовок H3, 24/32, medium</p>
+                        <p>Заголовок H4, 18/28, medium</p>
+                        <p>Лид P_Lead, 24/32, regular</p>
+                        <p>Крупный текст P_18, 18/28, regular</p>
+                        <p>Основной текст P_16, 16/24, regular</p>
+                        <p>Впомогательный текст P_14, 14/20, regular</p>
+                    </div>
+                    <div class="right">
+                        <p><h1>Текст заголовка</h1></p>
+                        <p><h2>Текст заголовка</h2></p>
+                        <p><h3>Текст заголовка</h3></p>
+                        <p><h4>Текст заголовка</h4></p>
+                        <p>Текст лида</p>
+                        <p>Крупный текст</p>
+                        <p>Основной текст</p>
+                        <p>Вспомогательный текст</p>
+
+                    </div>
+                </div>
             </div>
 
             <div class="UI">
                 <h2>UI</h2>
                 <h3>Текстовое поле</h3>
-                <input type="email" placeholder="E-mail">
+                <div class="email">
+                    <input id="email" placeholder="E-mail" type="email" />
+                    <label for="email">E-mail</label>
+                    <p>Текст ошибки</p>
+                </div>
+
+
 
                 <h3>Выпадающий список</h3>
                 <p>Компонент состоит из текстового поля и выпадающей подсказки</p>
