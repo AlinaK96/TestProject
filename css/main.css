@@ -62,15 +62,16 @@ footer {
 .Introduction .level {
   font-size: 24px;
   line-height: 32px;
+  margin-top: 0px;
   margin-bottom: 64px;
   font-weight: normal;
-  margin: 0 0 64px 0;
 }
 
 main h2 {
   font-size: 32px;
   line-height: 40px;
-  margin: 80px 0px 24px 0px;
+  margin-top: 80px;
+  margin-bottom: 24px;
 }
 main h3 {
   font-size: 24px;
@@ -88,7 +89,8 @@ main .adaptive img {
 
 /*таблица разметки grid*/
 table {
-  margin: 32px 0 48px 0;
+  margin-top: 32px;
+  margin-bottom: 48px;
 }
 table .tableHeader td {
   height: 20px;
