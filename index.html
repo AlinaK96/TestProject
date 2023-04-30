@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/footer.css">
@@ -83,7 +84,7 @@
 
                 <div class="desktop" id="grid">
                     <h3>Планшет (736+)</h3>
-                        <table>
+                        <table class="tableGrid">
                             <thead class="tableHeader">
                                 <tr>
                                     <td>Контент</th>
@@ -107,7 +108,7 @@
 
                 <div class="desktop">
                     <h3>Телефон (320+)</h3>
-                        <table>
+                        <table class="tableGrid">
                             <thead class="tableHeader">
                                 <tr>
                                     <td>Контент</th>
@@ -136,29 +137,7 @@
                 <button>Десктоп</button>
                 <button>Телефон</button>
                 <hr>
-                <div class="typographyInfo">
-                    <div class="left">
-                        <p>Заголовок H1, 48/56, bold</p>
-                        <p>Заголовок H2, 32/40, bold</p>
-                        <p>Заголовок H3, 24/32, medium</p>
-                        <p>Заголовок H4, 18/28, medium</p>
-                        <p>Лид P_Lead, 24/32, regular</p>
-                        <p>Крупный текст P_18, 18/28, regular</p>
-                        <p>Основной текст P_16, 16/24, regular</p>
-                        <p>Впомогательный текст P_14, 14/20, regular</p>
-                    </div>
-                    <div class="right">
-                        <p><h1>Текст заголовка</h1></p>
-                        <p><h2>Текст заголовка</h2></p>
-                        <p><h3>Текст заголовка</h3></p>
-                        <p><h4>Текст заголовка</h4></p>
-                        <p>Текст лида</p>
-                        <p>Крупный текст</p>
-                        <p>Основной текст</p>
-                        <p>Вспомогательный текст</p>
-
-                    </div>
-                </div>
+                
             </div>
 
             <div class="UI">
@@ -186,6 +165,7 @@
                 <button class="UIbutton">Отправить</button>
 
                 <h3>Чекбокс, радиобаттон</h3>
+                <div class="choose">
                     <div class="checkbox">
                         <input type="checkbox" name="" id="" >Выбери меня
                         <input type="checkbox" name="" id="">Выбери меня
@@ -197,8 +177,71 @@
                         <input type="radio" name="" id="">Макет оказался сильней
                         <input type="radio" name="" id="">Последний кораблик остыл
                     </div>
-
+                </div>
+                
                 <h3>Аккордеон</h3>
+                <div class="accordion-body">
+                    <div class="row">
+                        <div class="col-md-4 col-sm-12">
+                            <div class="accordion accordion-flush" id="accordionInfo">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="heading12">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse12" aria-expanded="false" aria-controls="collapse12">
+                                        Аккордеон
+                                    </button>
+                                    </h2>
+                                    <div id="collapse12" class="accordion-collapse collapse" aria-labelledby="heading12" data-bs-parent="#accordionInfo">
+                                    <div class="accordion-body fst-italic"> Гоpдость полными вагонами золотыми погонами <br>
+                                        С юга дyют молодые вет…<br>
+                                        Pазpывая в клочья облака не забыли шлют из далека<br>
+                                        С дома мама И не последняя любовь<br>
+                                        А по небy бегyт видишь чьи-то следы<br>
+                                        Это может быть ты это может быть я<br>
+                                        Это может наш дрyг<br>
+                                        Это может нам поют свои</div>
+                                
+                                </div>
+
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="heading12">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse12" aria-expanded="false" aria-controls="collapse12">
+                                        Аккордеон
+                                    </button>
+                                    </h2>
+                                    <div id="collapse12" class="accordion-collapse collapse" aria-labelledby="heading12" data-bs-parent="#accordionInfo">
+                                    <div class="accordion-body fst-italic"> Гоpдость полными вагонами золотыми погонами <br>
+                                        С юга дyют молодые вет…<br>
+                                        Pазpывая в клочья облака не забыли шлют из далека<br>
+                                        С дома мама И не последняя любовь<br>
+                                        А по небy бегyт видишь чьи-то следы<br>
+                                        Это может быть ты это может быть я<br>
+                                        Это может наш дрyг<br>
+                                        Это может нам поют свои</div>
+                                
+                                </div>
+
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="heading12">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse12" aria-expanded="false" aria-controls="collapse12">
+                                        Аккордеон
+                                    </button>
+                                    </h2>
+                                    <div id="collapse12" class="accordion-collapse collapse" aria-labelledby="heading12" data-bs-parent="#accordionInfo">
+                                    <div class="accordion-body fst-italic"> Гоpдость полными вагонами золотыми погонами <br>
+                                        С юга дyют молодые вет…<br>
+                                        Pазpывая в клочья облака не забыли шлют из далека<br>
+                                        С дома мама И не последняя любовь<br>
+                                        А по небy бегyт видишь чьи-то следы<br>
+                                        Это может быть ты это может быть я<br>
+                                        Это может наш дрyг<br>
+                                        Это может нам поют свои</div>
+                                
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
             </div>
 
             
@@ -210,7 +253,7 @@
         </footer>
     </div>
 
-    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="./js/app.js"></script>
 </body>
 </html>
