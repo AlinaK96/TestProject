@@ -201,3 +201,48 @@ main {
 .UIbutton:disabled{
     background: #CBCBCC;
 }
+
+//Аккордеон
+
+// .accordion{
+//     color: black;
+//     background-color: white;
+//     cursor: pointer;
+//     width: 904px;
+
+//     hr{
+//         border: 1px solid $accordionLine;
+
+//     }
+
+//     .label{
+//         @include fontSize (16px, 24px);
+//         color: $greyText;
+//     }
+
+//     img{
+//         position: absolute;
+//         right: -5px;
+//     }
+
+//     .contentAccordion{
+//         @include margin (24px, 15px);
+//     }
+
+//     .content{
+//         position: relative;
+//         height: 0;
+//         overflow: hidden;
+//         transition: 0.5s;
+//         @include fontSize (16px, 24px);
+//         @include margin (24px, 30px);
+//     }
+// }
+
+// .accordion .contentAccordion.active .content {
+//     height: 192px;
+// }
+
+// .label.active{
+//     color: $visitedLink;
+// }
