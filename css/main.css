@@ -1,3 +1,8 @@
+@charset "UTF-8";
+* {
+  margin: 0px;
+}
+
 html {
   height: 100vh;
 }
@@ -8,14 +13,15 @@ body {
   margin: 32px 64px;
 }
 
+/*разметка grid*/
 .container {
   height: 100vh;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 300px 32px 1fr;
   grid-template-columns: 300px 1fr;
-  -ms-grid-rows: 120px 32px 1fr 32px 120px;
-  grid-template-rows: 120px 1fr 120px;
+  -ms-grid-rows: 88px 32px 1fr 32px 120px;
+  grid-template-rows: 88px 1fr 120px;
   grid-gap: 32px;
       grid-template-areas: "header header" "aside main" "footer footer";
 }
@@ -45,4 +51,58 @@ footer {
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;
   grid-area: footer;
+}
+
+/* блок main*/
+.Introduction h1 {
+  margin-bottom: 16px;
+  font-size: 48px;
+  line-height: 56px;
+}
+.Introduction .level {
+  font-size: 24px;
+  line-height: 32px;
+  margin-bottom: 64px;
+  font-weight: normal;
+  margin: 0 0 64px 0;
+}
+
+main h2 {
+  font-size: 32px;
+  line-height: 40px;
+  margin: 80px 0px 24px 0px;
+}
+main h3 {
+  font-size: 24px;
+  line-height: 32px;
+}
+main p {
+  width: 592px;
+  font-size: 16px;
+  line-height: 24px;
+}
+main .adaptive img {
+  height: 480px;
+  width: 904px;
+}
+
+/*таблица разметки grid*/
+table {
+  margin: 32px 0 48px 0;
+}
+table .tableHeader td {
+  height: 20px;
+  width: 176px;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: normal;
+  color: #7D7D7D;
+}
+table .tableBody td {
+  height: 20px;
+  width: 176px;
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: normal;
+  color: #1B1B1B;
 }

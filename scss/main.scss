@@ -1,6 +1,10 @@
 @import "variables";
 @import "mixins";
 
+*{
+    margin: 0px;
+}
+
 html {
     height: 100vh;
 
@@ -12,11 +16,13 @@ body{
 
 }
 
+
+/*разметка grid*/
 .container{
     height: 100vh;
     display: grid;
     grid-template-columns: 300px 1fr;
-    grid-template-rows: 120px 1fr 120px;
+    grid-template-rows: 88px 1fr 120px;
     grid-gap: 32px;
     grid-template-areas:
         "header header"
@@ -40,3 +46,67 @@ main {
 footer {
     grid-area: footer;
 }
+
+/* блок main*/
+
+.Introduction {
+    h1 {
+        margin-bottom: 16px;
+        @include fontSize (48px, 56px);
+    }
+
+    .level{
+        @include fontSize (24px, 32px);
+        margin-bottom: 64px;
+        font-weight: normal;
+        margin: 0 0 64px 0;
+    }
+}
+
+main {
+    h2{
+        @include fontSize (32px, 40px);
+        margin: 80px 0px 24px 0px;
+    }
+
+    h3{
+        @include fontSize (24px, 32px);
+    }
+
+    p {
+        width: 592px;
+        @include fontSize (16px, 24px);
+
+    }
+
+    .adaptive img {
+        @include size (480px, 904px);
+    }
+}
+
+/*таблица разметки grid*/
+
+
+table{
+    margin: 32px 0 48px 0;
+
+    .tableHeader {
+        td{
+        @include size (20px, 176px);
+        @include fontSize (14px, 20px);
+        font-weight:  normal;
+        color: $greyText;
+    }
+}
+
+.tableBody {
+    td{
+        @include size (20px, 176px);
+        @include fontSize (24px, 32px);
+        font-weight:  normal;
+        color: $blackFont;
+    }
+}
+}
+
+
