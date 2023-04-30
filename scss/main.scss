@@ -176,3 +176,28 @@ main {
     color: $error;
     margin-top: 6px;
 }
+
+//Кнопка "отправить"
+
+.UIbutton{
+    @include size (56px, 148px);
+    letter-spacing: 1px;
+    background: linear-gradient(45deg, #DD80ED 0%, #3D28E3 100%);
+    border-radius: 32px;
+    border: transparent;
+    color: white;
+    cursor: pointer;
+}
+
+.UIbutton:hover{
+    background: linear-gradient(225deg, #DD80ED 0%, #3D28E3 100%);
+    transition: all 0.1s ease-in 0s;
+}
+
+.UIbutton:active{
+    background: linear-gradient(206.57deg, #DD80ED 0%, #3D28E3 83.33%);
+}
+
+.UIbutton:disabled{
+    background: #CBCBCC;
+}
