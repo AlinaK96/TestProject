@@ -76,6 +76,9 @@ main h2 {
 main h3 {
   font-size: 24px;
   line-height: 32px;
+  margin-top: 64px;
+  margin-bottom: 32px;
+  font-weight: 500;
 }
 main p {
   width: 592px;
@@ -85,6 +88,9 @@ main p {
 main .adaptive img {
   height: 480px;
   width: 904px;
+}
+main .desktop {
+  margin-top: 48px;
 }
 
 /*таблица разметки grid*/

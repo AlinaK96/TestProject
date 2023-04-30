@@ -70,6 +70,8 @@ main {
 
     h3{
         @include fontSize (24px, 32px);
+        @include margin (64px,32px);
+        font-weight: 500;
     }
 
     p {
@@ -80,6 +82,10 @@ main {
 
     .adaptive img {
         @include size (480px, 904px);
+    }
+
+    .desktop{
+        margin-top: 48px;
     }
 }
 
@@ -96,16 +102,13 @@ table{
         font-weight:  normal;
         color: $greyText;
     }
-}
-
-.tableBody {
-    td{
-        @include size (20px, 176px);
-        @include fontSize (24px, 32px);
-        font-weight:  normal;
-        color: $blackFont;
+    }
+    .tableBody {
+        td{
+            @include size (20px, 176px);
+            @include fontSize (24px, 32px);
+            font-weight:  normal;
+            color: $blackFont;
+        }
     }
 }
-}
-
-
