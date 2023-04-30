@@ -3,6 +3,8 @@
 
 .asideContent{
     position: fixed;
+    top: 288px;
+    left: 64px;
     a{
         display: block;
         @include size (20px, 147px);

@@ -1,5 +1,7 @@
 .asideContent {
   position: fixed;
+  top: 288px;
+  left: 64px;
 }
 .asideContent a {
   display: block;
