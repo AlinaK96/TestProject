@@ -2,6 +2,9 @@
 * {
   margin: 0px;
 }
+* ul {
+  padding: 0;
+}
 
 html {
   height: 100vh;
@@ -123,90 +126,6 @@ main .desktop {
 }
 
 /*UI*/
-/*стилизация различного состояния inputa email*/
-.email {
-  position: relative;
-}
-.email p {
-  display: none;
-}
-
-#email {
-  font-size: 16px;
-  line-height: 24px;
-  height: 24px;
-  width: 280px;
-  border: transparent;
-  border-bottom: 2px solid #AEADAE;
-  cursor: pointer;
-}
-
-#email:hover {
-  border-bottom: 2px solid #3E29E3;
-}
-
-#email:focus {
-  border-bottom: 4px solid #3E29E3;
-  outline: none;
-}
-
-.email label {
-  position: absolute;
-  left: 0px;
-  top: 0;
-  font-size: 12px;
-  line-height: 20px;
-  color: #7D7D7D;
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
-  overflow: hidden;
-  white-space: nowrap;
-  z-index: 1;
-  opacity: 0;
-}
-
-.email input:focus + label {
-  opacity: 1;
-  top: -18px;
-}
-
-#email.error {
-  border-bottom: 4px solid #E80F3B;
-}
-
-.errorText {
-  display: inline;
-  font-size: 14px;
-  line-height: 20px;
-  color: #E80F3B;
-  margin-top: 6px;
-}
-
-.UIbutton {
-  height: 56px;
-  width: 148px;
-  letter-spacing: 1px;
-  background: linear-gradient(45deg, #DD80ED 0%, #3D28E3 100%);
-  border-radius: 32px;
-  border: transparent;
-  color: white;
-  cursor: pointer;
-}
-
-.UIbutton:hover {
-  background: linear-gradient(225deg, #DD80ED 0%, #3D28E3 100%);
-  -webkit-transition: all 0.1s ease-in 0s;
-  transition: all 0.1s ease-in 0s;
-}
-
-.UIbutton:active {
-  background: linear-gradient(206.57deg, #DD80ED 0%, #3D28E3 83.33%);
-}
-
-.UIbutton:disabled {
-  background: #CBCBCC;
-}
-
 .accordion {
   color: black;
   background-color: white;
