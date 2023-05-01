@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/footer.css">
     <link rel="stylesheet" href="./css/aside.css">
+    <link rel="stylesheet" href="./css/UI.css">
 
 
     <link rel="stylesheet prefetch" href="https://cdn.rawgit.com/mfd/e7842774e037edf15919037594a79b2b/raw/665bdfc532094318449f1010323c84013d5af953/graphik.css">
@@ -152,29 +153,57 @@
 
                 <h3>Выпадающий список</h3>
                 <p>Компонент состоит из текстового поля и выпадающей подсказки</p>
-                <input type="text" name="city" list="cityname" placeholder="Выберите что-нибудь">
-                    <datalist id="cityname">
-                        <option value="Первый стул">
-                        <option value="Второй стул">
-                        <option value="Выбранный пункт">
-                        <option value="Теорема Эскобара">
-                    </datalist>
+                <div class="drop-down">
+                    <div class="select-wrapper">
+                        <select name="selectDrop" id="" class="select">
+                            <option value="" disabled selected>Выберите что-нибудь</option>
+                            <option value="1">Первый стул</option>
+                            <option value="2">Второй стул</option>
+                            <option value="3">Выбранный пункт</option>
+                            <option value="4">Теорема Эскобара</option>
+                        </select>
+                        <img src="./img/svg/Path.svg" alt="Something went wrong">
+                    </div>
+                </div>
 
                 <h3>Кнопка</h3>
                 <button class="UIbutton">Отправить</button>
 
                 <h3>Чекбокс, радиобаттон</h3>
                 <div class="choose">
-                    <div class="checkbox">
-                        <input type="checkbox" name="" id="" >Выбери меня
-                        <input type="checkbox" name="" id="">Выбери меня
-                        <input type="checkbox" name="" id="">Птица счастья завтрашнего дня
+                    <div>
+                        <div>
+                            <label class="labelType">
+                                <input type="checkbox" class="check">
+                                Выбери меня
+                                <span class="custom-checkbox"></span>
+
+                            </label>
+                        </div>
+
+                        <div>
+                            <label class="labelType">
+                                <input type="checkbox" class="check">
+                                Выбери меня
+                                <span class="custom-checkbox"></span>
+                            </label>
+                        </div>
+
+                        <div>
+                            <label class="labelType">
+                                <input type="checkbox" class="check">
+                                Птица счастья завтрашнего дня
+                                <span class="custom-checkbox"></span>
+                            </label>
+                        </div>
                     </div>
 
                     <div class="radio">
-                        <input type="radio" name="" id="">Пластмассовый мир победил
-                        <input type="radio" name="" id="">Макет оказался сильней
-                        <input type="radio" name="" id="">Последний кораблик остыл
+                        <ul class="radios">
+                            <li class="radio-group"><input type="radio" id="radio-1" class="radio"><label for="radio-1" class="labelType">Пластмассовый мир победил</label></li>
+                            <li class="radio-group"><input type="radio" id="radio-2" class="radio"><label for="radio-2" class="labelType">Макет оказался сильней</label></li>
+                            <li class="radio-group"><input type="radio" id="radio-3" class="radio"><label for="radio-3" class="labelType">Последний кораблик остыл</label></li>
+                        </ul>
                     </div>
                 </div>
                 
@@ -239,7 +268,25 @@
                 </div>
             </div>
 
-            
+<!--             
+<form>
+ 
+    <div class="__select" data-state="">
+      <div class="__select__title" data-default="Option 0">Option 0</div>
+      <div class="__select__content">
+        <input id="singleSelect0" class="__select__input" type="radio" name="singleSelect" checked />
+        <label for="singleSelect0" class="__select__label">Option 0</label>
+        <input id="singleSelect1" class="__select__input" type="radio" name="singleSelect" />
+        <label for="singleSelect1" class="__select__label">Option 1</label>
+        <input id="singleSelect2" class="__select__input" type="radio" name="singleSelect" disabled />
+        <label for="singleSelect2" class="__select__label">Option 2 (disabled)</label>
+        <input id="singleSelect3" class="__select__input" type="radio" name="singleSelect" />
+        <label for="singleSelect3" class="__select__label">Option 3</label>
+        <input id="singleSelect4" class="__select__input" type="radio" name="singleSelect" />
+        <label for="singleSelect4" class="__select__label">Option 4</label>
+      </div>
+    </div>
+  </form> -->
 
 
         </main>
