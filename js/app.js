@@ -6,8 +6,8 @@ const intoLink = document.querySelector ('#startWord')
 const gridLink = document.querySelector("#gridLink")
 const typographyLink = document.querySelector('#typographyLink')
 const UILink = document.querySelector('#UIlink')
-// const accordions = document.querySelectorAll('.contentAccordion');
-// const label = document.querySelectorAll('.label');
+const accordions = document.querySelectorAll('.contentAccordion');
+const label = document.querySelectorAll('.label');
 
 //работа с кнопкой меню (добавление класса active для двух элиментов, которые будут менять своё положение и цвет)
 
@@ -37,20 +37,20 @@ UILink.addEventListener('click', () => {
 
 //Добавление функций клика для аккордиона
 
-// for (const accordion of accordions) {
-//         accordion.addEventListener('click', () => {
-//         accordion.classList.toggle('active')
-//     })
+for (const accordion of accordions) {
+        accordion.addEventListener('click', () => {
+        accordion.classList.toggle('active')
+    })
 
-// }
+}
 
-// /**
-//  * Функция при клике убирает класс 'active' для одного из слайда аккордеона
-//  * @param {number} индекс слайда аккордиона из массива всех слайдов с классом active
-//  * @returns {number} слайд аккордиона без данного класса
-//  */
-// function clearActiveClasses() {
-//     accordions.forEach((accordion) => {
-//         accordion.classList.remove('active')
-//     })
-// }
+/**
+ * Функция при клике убирает класс 'active' для одного из слайда аккордеона
+ * @param {number} индекс слайда аккордиона из массива всех слайдов с классом active
+ * @returns {number} слайд аккордиона без данного класса
+ */
+function clearActiveClasses() {
+    accordions.forEach((accordion) => {
+        accordion.classList.remove('active')
+    })
+}
