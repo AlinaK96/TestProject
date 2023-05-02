@@ -1,4 +1,9 @@
 @charset "UTF-8";
+.UI h3:first-child {
+  margin-top: 24px;
+  margin-bottom: 92px;
+}
+
 /*стилизация различного состояния inputa email*/
 .email {
   position: relative;
@@ -59,6 +64,8 @@
 }
 
 .UIbutton {
+  margin-top: 44px;
+  margin-bottom: 16px;
   height: 56px;
   width: 148px;
   letter-spacing: 1px;
@@ -84,11 +91,11 @@
 }
 
 .choose {
-  height: 145px;
+  height: 153px;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[2];
-  grid-template-columns: repeat(2, 1fr);
+  -ms-grid-columns: (344px)[2];
+  grid-template-columns: repeat(2, 344px);
       grid-template-areas: "chekbox radio";
 }
 
@@ -191,7 +198,7 @@
   border: 2px solid #AEADAE;
   border-radius: 50%;
   margin-right: 16px;
-  margin-bottom: 24px;
+  margin-bottom: 19px;
   vertical-align: text-top;
 }
 
@@ -216,6 +223,10 @@
 }
 .radioOption:checked + .custom-radio::before .custom-radio {
   border: 2px solid #3E29E3;
+}
+
+.accordion-body {
+  margin-bottom: 160px;
 }
 
 .accordion {
@@ -279,6 +290,14 @@
 .contentAccordion.active img {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
+}
+
+.dropList {
+  margin-top: 64px;
+  margin-bottom: 60px;
+}
+.dropList p {
+  margin-top: -68px;
 }
 
 form {
@@ -388,7 +407,9 @@ form {
   display: none;
 }
 .select-input:checked + label {
-  background-color: #3E29E3;
+  color: #3E29E3;
+}
+.select-input:hover + label {
   color: white;
 }
 .select-input:disabled + label {
@@ -406,15 +427,201 @@ form {
   width: 100%;
   height: 40px;
   max-height: 0;
-  -webkit-transition: all 0.2s ease-out;
-  transition: all 0.2s ease-out;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
   cursor: pointer;
   overflow: hidden;
 }
-.select-label + input + .select-label {
-  border-top: 0 solid #3E29E3;
-}
 .select-label:hover {
-  color: #3E29E3;
-  background-color: white;
+  background-color: #3E29E3;
+  color: white;
+}
+
+.tab {
+  overflow: hidden;
+  width: 904px;
+  border-bottom: 1px solid #CBCBCC;
+}
+
+/* Кнопки для открытия tab */
+.tab button {
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: transparent;
+  text-align: center;
+  color: #7D7D7D;
+  font-size: 16px;
+  line-height: 24px;
+  margin-right: 32px;
+  height: 48px;
+}
+
+.tab button:hover,
+.tab button.seen {
+  color: #1B1B1B;
+  border-bottom: 2px solid #3E29E3;
+}
+
+.tabcontent,
+.mobileContent {
+  display: none;
+}
+
+.tabcontent.seen {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 48px;
+}
+.tabcontent.seen .right {
+  width: 592px;
+}
+.tabcontent.seen .right h1 {
+  font-size: 48px;
+  line-height: 56px;
+  margin-bottom: 48px;
+}
+.tabcontent.seen .right h2 {
+  font-size: 32px;
+  line-height: 40px;
+  margin-bottom: 48px;
+  margin-top: 0;
+}
+.tabcontent.seen .right h3 {
+  font-size: 24px;
+  line-height: 32px;
+  margin-bottom: 48px;
+  margin-top: 0;
+}
+.tabcontent.seen .right h4 {
+  font-size: 18px;
+  line-height: 28px;
+  margin-bottom: 48px;
+}
+.tabcontent.seen .right .lead {
+  font-size: 24px;
+  line-height: 32px;
+  margin-bottom: 48px;
+}
+.tabcontent.seen .right .bigText {
+  font-size: 18px;
+  line-height: 28px;
+  margin-bottom: 48px;
+}
+.tabcontent.seen .right .mainText {
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 48px;
+}
+.tabcontent.seen .right .extra {
+  font-size: 14px;
+  line-height: 20px;
+}
+.tabcontent.seen .left {
+  height: 20px;
+  width: 280px;
+  margin-right: 32px;
+  color: #7D7D7D;
+}
+.tabcontent.seen .left p {
+  font-size: 14px;
+  line-height: 20px;
+}
+.tabcontent.seen .left p:first-child {
+  margin-bottom: 84px;
+}
+.tabcontent.seen .left p:nth-child(2) {
+  margin-bottom: 68px;
+}
+.tabcontent.seen .left p:nth-child(3),
+.tabcontent.seen .left p:nth-child(5) {
+  margin-bottom: 60px;
+}
+.tabcontent.seen .left p:nth-child(4),
+.tabcontent.seen .left p:nth-child(6) {
+  margin-bottom: 56px;
+}
+.tabcontent.seen .left p:nth-child(5) {
+  margin-bottom: 60px;
+}
+.tabcontent.seen .left p:nth-child(7) {
+  margin-bottom: 52px;
+}
+
+.mobileContent.seen {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 48px;
+}
+.mobileContent.seen .right {
+  width: 592px;
+}
+.mobileContent.seen .right h1 {
+  font-size: 32px;
+  line-height: 40px;
+  margin-bottom: 48px;
+}
+.mobileContent.seen .right h2 {
+  font-size: 28px;
+  line-height: 36px;
+  margin-bottom: 48px;
+  margin-top: 0;
+}
+.mobileContent.seen .right h3 {
+  font-size: 20px;
+  line-height: 28px;
+  margin-bottom: 48px;
+  margin-top: 0;
+}
+.mobileContent.seen .right h4 {
+  font-size: 18px;
+  line-height: 28px;
+  margin-bottom: 48px;
+}
+.mobileContent.seen .right .lead {
+  font-size: 20px;
+  line-height: 28px;
+  margin-bottom: 48px;
+}
+.mobileContent.seen .right .bigText {
+  font-size: 18px;
+  line-height: 28px;
+  margin-bottom: 48px;
+}
+.mobileContent.seen .right .mainText {
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 48px;
+}
+.mobileContent.seen .right .extra {
+  font-size: 14px;
+  line-height: 20px;
+}
+.mobileContent.seen .left {
+  height: 20px;
+  width: 280px;
+  margin-right: 32px;
+  color: #7D7D7D;
+}
+.mobileContent.seen .left p {
+  font-size: 14px;
+  line-height: 20px;
+}
+.mobileContent.seen .left p:first-child {
+  margin-bottom: 68px;
+}
+.mobileContent.seen .left p:nth-child(2) {
+  margin-bottom: 64px;
+}
+.mobileContent.seen .left p:nth-child(3),
+.mobileContent.seen .left p:nth-child(4),
+.mobileContent.seen .left p:nth-child(5),
+.mobileContent.seen .left p:nth-child(6) {
+  margin-bottom: 56px;
+}
+.mobileContent.seen .left p:nth-child(7) {
+  margin-bottom: 52px;
 }

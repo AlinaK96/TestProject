@@ -1,6 +1,13 @@
 @import "variables";
 @import "mixins";
 
+.UI{
+    h3:first-child{
+        @include margin (24px, 92px);
+    }
+}
+
+
 /*стилизация различного состояния inputa email*/
 
 .email {
@@ -57,41 +64,13 @@
     margin-top: 6px;
 }
 
-//Выпадающий список
-
-// .select{
-//     -moz-appearance: none;
-//     -webkit-appearance: none;
-//     appearance: none;
-//     border: none;
-//     border-bottom: 2px solid $greyLine;
-//     background-color: transparent;
-//     outline: none;
-//     width: 280px;
-//     padding-bottom: 6px;
-//     cursor: pointer;
-//     @include fontSize (16px, 24px);
-//     margin-top: 48px;
-// }
-
-// .select::-ms-expand{
-//     display: none;
-// }
-
-// .select-wrapper{
-//     img{
-//         position: relative;
-//         left: -15px;
-//         pointer-events: none;
-//     }
-// }
-
 
 
 
 //Кнопка "отправить"
 
 .UIbutton{
+    @include margin (44px, 16px);
     @include size (56px, 148px);
     letter-spacing: 1px;
     background: linear-gradient(45deg, #DD80ED 0%, #3D28E3 100%);
@@ -117,9 +96,9 @@
 //Чекбокс, радиобаттон
 
 .choose{
-    height: 145px;
+    height: 153px;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 344px);
     grid-template-areas:
         "chekbox radio"
 }
@@ -217,7 +196,7 @@
     border: 2px solid $greyLine;
     border-radius: 50%;
     margin-right: 16px;
-    margin-bottom: 24px;
+    margin-bottom: 19px;
     vertical-align: text-top;
 }
 
@@ -244,6 +223,9 @@
 }
 
 //Аккордеон
+.accordion-body{
+    margin-bottom: 160px;
+}
 
 .accordion{
     color: black;
@@ -305,6 +287,15 @@
         transform: rotate(180deg);
     }
 
+}
+
+//выпадающий список
+.dropList{
+    @include margin (64px, 60px);
+
+    p{
+        margin-top: -68px;
+    }
 }
 
 //кнопка выбора
@@ -413,9 +404,12 @@ form{
 .select-input {
     display: none;
     &:checked + label {
-        background-color: $visitedLink;
-        color: white;
+        color: $visitedLink;
         }
+        &:hover + label{
+            color: white;
+        }
+
         &:disabled + label {
             opacity: 0.6;
             pointer-events: none;
@@ -429,15 +423,215 @@ form{
     height: 40px;
     max-height: 0;
     
-    transition: all 0.2s ease-out;
+    transition: all 0.2s ease-in;
     cursor: pointer;
     overflow: hidden;
-    & + input + & {
-        border-top: 0 solid $visitedLink;
-    }
 
     &:hover {
-        color: $visitedLink;
-        background-color: white ;
+        background-color: $visitedLink;
+        color: white;
+    }
+}
+
+
+
+
+
+.tab {
+    overflow: hidden;
+    width: 904px;
+    border-bottom: 1px solid $accordionLine;
+}
+
+  /* Кнопки для открытия tab */
+.tab button {
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: transparent;
+    text-align: center;
+    color: $greyText;
+    @include fontSize (16px, 24px);
+    margin-right: 32px;
+    height: 48px;
+}
+
+.tab button:hover,
+.tab button.seen {
+    color: $blackFont;
+    border-bottom: 2px solid $visitedLink;
+}
+
+
+.tabcontent,
+.mobileContent {
+    display: none;
+}
+
+.tabcontent.seen{
+    display: flex;
+    margin-top: 48px;
+    .right{
+        width: 592px;
+        h1{
+            @include fontSize (48px,56px);
+            margin-bottom: 48px;
+        }
+
+        h2{
+            @include fontSize (32px,40px);
+            margin-bottom: 48px;
+            margin-top: 0;
+        }
+
+        h3{
+            @include fontSize (24px,32px);
+            margin-bottom: 48px;
+            margin-top: 0;
+
+        }
+
+        h4{
+            @include fontSize (18px,28px);
+            margin-bottom: 48px;
+        }
+
+        .lead{
+            @include fontSize (24px,32px);
+            margin-bottom: 48px;
+        }
+
+        .bigText{
+            @include fontSize (18px,28px);
+            margin-bottom: 48px;
+        }
+
+        .mainText{
+            @include fontSize (16px,24px);
+            margin-bottom: 48px;
+        }
+
+        .extra{
+            @include fontSize (14px,20px);
+        }
+    }
+
+    .left{
+        @include size (20px, 280px);
+        margin-right: 32px;
+        color: $greyText;
+    
+        p{
+        @include fontSize (14px, 20px);
+    
+        }
+    
+        p:first-child{
+            margin-bottom: 84px;
+        }
+    
+        p:nth-child(2){
+            margin-bottom: 68px;
+        }
+    
+        p:nth-child(3),
+        p:nth-child(5){
+            margin-bottom: 60px;
+        }
+    
+        p:nth-child(4),
+        p:nth-child(6){
+            margin-bottom: 56px;
+        }
+    
+        p:nth-child(5){
+            margin-bottom: 60px;
+        }
+        p:nth-child(7){
+            margin-bottom: 52px;
+        }
+    }
+
+}
+
+
+
+.mobileContent.seen{
+    display: flex;
+    margin-top: 48px;
+
+    .right{
+        width: 592px;
+        h1{
+            @include fontSize (32px,40px);
+            margin-bottom: 48px;
+        }
+
+        h2{
+            @include fontSize (28px,36px);
+            margin-bottom: 48px;
+            margin-top: 0;
+        }
+
+        h3{
+            @include fontSize (20px,28px);
+            margin-bottom: 48px;
+            margin-top: 0;
+
+        }
+
+        h4{
+            @include fontSize (18px,28px);
+            margin-bottom: 48px;
+        }
+
+        .lead{
+            @include fontSize (20px,28px);
+            margin-bottom: 48px;
+        }
+
+        .bigText{
+            @include fontSize (18px,28px);
+            margin-bottom: 48px;
+        }
+
+        .mainText{
+            @include fontSize (16px,24px);
+            margin-bottom: 48px;
+        }
+
+        .extra{
+            @include fontSize (14px,20px);
+        }
+    }
+
+    .left{
+        @include size (20px, 280px);
+        margin-right: 32px;
+        color: $greyText;
+    
+        p{
+        @include fontSize (14px, 20px);
+    
+        }
+    
+        p:first-child{
+            margin-bottom: 68px;
+        }
+    
+        p:nth-child(2){
+            margin-bottom: 64px;
+        }
+    
+        p:nth-child(3),
+        p:nth-child(4),
+        p:nth-child(5),
+        p:nth-child(6){
+            margin-bottom: 56px;
+        }
+        p:nth-child(7){
+            margin-bottom: 52px;
+        }
     }
 }
