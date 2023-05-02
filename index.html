@@ -153,18 +153,27 @@
 
                 <h3>Выпадающий список</h3>
                 <p>Компонент состоит из текстового поля и выпадающей подсказки</p>
-                <div class="drop-down">
-                    <div class="select-wrapper">
-                        <select name="selectDrop" id="" class="select">
-                            <option value="" disabled selected>Выберите что-нибудь</option>
-                            <option value="1">Первый стул</option>
-                            <option value="2">Второй стул</option>
-                            <option value="3">Выбранный пункт</option>
-                            <option value="4">Теорема Эскобара</option>
-                        </select>
-                        <img src="./img/svg/Path.svg" alt="Something went wrong">
+                <form>
+                    <div class="select" data-state="">
+                        <div class="selectTitle" data-default="Option 0">Выберите что-нибудь</div>
+                            <div class="selectContent">
+                                <input id="singleSelect0" class="select-input" type="radio" name="singleSelect" checked>
+                                <label for="singleSelect0" class="select-label">Первый стул</label>
+
+                                <input id="singleSelect4" class="select-input" type="radio" name="singleSelect">
+                                <label for="singleSelect4" class="select-label">Первый стул</label>
+
+                                <input id="singleSelect1" class="select-input" type="radio" name="singleSelect">
+                                <label for="singleSelect1" class="select-label">Второй стул</label>
+
+                                <input id="singleSelect2" class="select-input" type="radio" name="singleSelect">
+                                <label for="singleSelect2" class="select-label">Выбранный пункт</label>
+
+                                <input id="singleSelect3" class="select-input" type="radio" name="singleSelect">
+                                <label for="singleSelect3" class="select-label">Теорема Эскобара</label>
+                            </div>
                     </div>
-                </div>
+                </form>
 
                 <h3>Кнопка</h3>
                 <button class="UIbutton">Отправить</button>
@@ -279,26 +288,6 @@
                     
                 </div>
             </div>
-
-<!--             
-<form>
- 
-    <div class="__select" data-state="">
-      <div class="__select__title" data-default="Option 0">Option 0</div>
-      <div class="__select__content">
-        <input id="singleSelect0" class="__select__input" type="radio" name="singleSelect" checked />
-        <label for="singleSelect0" class="__select__label">Option 0</label>
-        <input id="singleSelect1" class="__select__input" type="radio" name="singleSelect" />
-        <label for="singleSelect1" class="__select__label">Option 1</label>
-        <input id="singleSelect2" class="__select__input" type="radio" name="singleSelect" disabled />
-        <label for="singleSelect2" class="__select__label">Option 2 (disabled)</label>
-        <input id="singleSelect3" class="__select__input" type="radio" name="singleSelect" />
-        <label for="singleSelect3" class="__select__label">Option 3</label>
-        <input id="singleSelect4" class="__select__input" type="radio" name="singleSelect" />
-        <label for="singleSelect4" class="__select__label">Option 4</label>
-      </div>
-    </div>
-  </form> -->
 
 
         </main>
