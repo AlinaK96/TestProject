@@ -35,7 +35,7 @@ gridLink.addEventListener('click', () => {
 })
 
 typographyLink.addEventListener('click', () => {
-    window.scrollTo({ top: 2500, behavior: 'smooth' })
+    window.scrollTo({ top: 2485, behavior: 'smooth' })
 })
 
 UILink.addEventListener('click', () => {
