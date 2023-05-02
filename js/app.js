@@ -15,6 +15,12 @@ const selectSingle = document.querySelector('.select');
 const selectSingle_title = selectSingle.querySelector('.selectTitle');
 const selectSingle_labels = selectSingle.querySelectorAll('.select-label');
 
+//кнопки типографики
+const desk = document.querySelector('.deskink')
+const mobile = document.querySelector('.mobileLink')
+const deskTab = document.querySelector('.tabcontent')
+const mobTab = document.querySelector('.mobileContent')
+
 //работа с кнопкой меню (добавление класса active для двух элиментов, которые будут менять своё положение и цвет)
 
 BurgerButton.addEventListener('click', () => {
@@ -63,9 +69,6 @@ function clearActiveClasses() {
 }
 
 
-
-
-
 // выпадащий список
 selectSingle_title.addEventListener('click', () => {
     if ('active' === selectSingle.getAttribute('data-state')) {
@@ -82,3 +85,22 @@ for (let i = 0; i < selectSingle_labels.length; i++) {
         selectSingle.setAttribute('data-state', '');
     });
 }
+
+//реализация выбора раздела типографики по клику
+
+desk.addEventListener('click', () => {
+    mobTab.classList.remove('seen')
+    mobile.classList.remove('seen')
+
+    desk.classList.toggle('seen')
+    deskTab.classList.toggle('seen')
+})
+
+mobile.addEventListener('click', () => {
+    desk.classList.remove('seen')
+    deskTab.classList.remove('seen')
+
+    mobile.classList.toggle('seen')
+    mobTab.classList.toggle('seen')
+})
+
