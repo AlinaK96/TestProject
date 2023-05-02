@@ -18,11 +18,13 @@
   display: flex;
 }
 .profile img {
+  position: absolute;
+  left: 64px;
   height: 45px;
   width: 45px;
 }
 .profile .name {
-  margin-left: 24px;
+  margin-left: 64px;
 }
 .profile .name p {
   margin: 0;
@@ -37,9 +39,10 @@
 .burger-menu {
   display: block;
   position: relative;
+  margin-right: 128px;
   height: 10px;
   width: 32px;
-  z-index: 3;
+  z-index: 10;
 }
 
 .burger-menu span {
@@ -65,7 +68,7 @@
 .burger-menu.active:before {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
-  background-color: yellow;
+  background-color: white;
 }
 
 .burger-menu span.active {
@@ -76,5 +79,111 @@
   margin: 0;
   -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
-  background-color: yellow;
+  background-color: white;
+}
+
+.dropInfo {
+  display: none;
+}
+
+.dropInfo.active {
+  display: block;
+}
+.dropInfo.active img {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  height: 756px;
+  width: 1344px;
+  z-index: 5;
+}
+.dropInfo.active .whiteBlock {
+  position: absolute;
+  height: 740px;
+  width: 760px;
+  left: 8px;
+  top: 8px;
+  background-color: white;
+  z-index: 5;
+}
+.dropInfo.active .whiteHeader {
+  position: absolute;
+}
+.dropInfo.active .whiteHeader p {
+  font-size: 14px;
+  line-height: 20px;
+  color: #7D7D7D;
+  position: relative;
+  left: 160px;
+  top: 38px;
+}
+.dropInfo.active .logo {
+  height: 40px;
+  width: 40px;
+  left: 56px;
+  top: 32px;
+}
+.dropInfo.active .whiteBody {
+  position: absolute;
+  height: 80px;
+  width: 494px;
+  left: 168px;
+  top: 120px;
+}
+.dropInfo.active .whiteBody h2 {
+  margin-bottom: 24px;
+}
+.dropInfo.active .whiteBody p {
+  height: 72px;
+  width: 384px;
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 32px;
+}
+.dropInfo.active .whiteBody span {
+  height: 28px;
+  width: 167px;
+  font-size: 18px;
+  line-height: 28px;
+}
+.dropInfo.active a {
+  position: absolute;
+  height: 24px;
+  width: 254px;
+  font-size: 16px;
+  line-height: 24px;
+  text-decoration: none;
+  color: #3E29E3;
+  left: 240px;
+  top: 673px;
+}
+.dropInfo.active a:visited {
+  color: #3E29E3;
+}
+.dropInfo.active .whiteFooter {
+  cursor: pointer;
+}
+.dropInfo.active .whiteFooter .whiteCircle {
+  position: absolute;
+  height: 48px;
+  width: 48px;
+  left: 168px;
+  top: 660px;
+  border-radius: 50%;
+  -webkit-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.08);
+          box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.08);
+}
+.dropInfo.active .whiteFooter #bottom {
+  position: relative;
+  height: 12px;
+  width: 12px;
+  left: 17px;
+  top: 17px;
+}
+.dropInfo.active .whiteFooter #top {
+  position: relative;
+  height: 6px;
+  width: 6px;
+  left: 9px;
+  top: 9px;
 }

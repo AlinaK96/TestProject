@@ -14,11 +14,13 @@
     display: flex;
 
     img{
+        position: absolute;
+        left: 64px;
         @include size (45px, 45px);
     }
 
     .name{
-        margin-left: 24px;
+        margin-left: 64px;
 
         p {
             margin: 0;
@@ -39,8 +41,9 @@
 .burger-menu{
     display: block;
     position: relative;
+    margin-right: 128px;
     @include size (10px, 32px);
-    z-index: 3;
+    z-index: 10;
 }
 
 .burger-menu span{
@@ -61,7 +64,7 @@ content: '';
 
 .burger-menu.active:before{
     transform: rotate(45deg);
-    background-color: yellow;
+    background-color: white;
 }
 
 .burger-menu span.active{
@@ -69,6 +72,117 @@ content: '';
     @include size (2px, 32px);
     margin: 0;
     transition: $transition;
-    background-color: yellow;
+    background-color: white;
 }
 
+//выпадающее меню личной информации
+
+.dropInfo{
+    display:none;
+}
+
+.dropInfo.active {
+    display: block;
+    img{
+        position: absolute;
+        top: 0px;
+        left: 0;
+        height: 756px;
+        width: 1344px;
+        z-index: 5;
+    }    
+    
+    .whiteBlock{
+        position: absolute;
+        @include size (740px, 760px);
+        left: 8px;
+        top: 8px;
+        background-color: white;
+        z-index: 5;
+    }
+
+    .whiteHeader{
+        position: absolute;
+
+
+        p{
+            @include fontSize (14px, 20px);
+            color: $greyText;
+            position: relative;
+            left: 160px;
+            top: 38px;
+        }
+    }
+
+    .logo{
+        @include size (40px, 40px);
+        left: 56px;
+        top: 32px;
+    }
+
+    .whiteBody{
+        position: absolute;
+        height: 80px;
+        width: 494px;
+        left: 168px;
+        top: 120px;
+
+        h2{
+            margin-bottom: 24px;
+        }
+
+        p{
+            @include size (72px, 384px);
+            @include fontSize (16px, 24px);
+            margin-bottom: 32px;
+        }
+
+        span{
+            @include size (28px, 167px);
+            @include fontSize (18px, 28px);
+        }
+    }
+
+    a{
+        position: absolute;
+        @include size (24px, 254px);
+        @include fontSize (16px, 24px);
+        text-decoration: none;
+        color: $visitedLink ;
+        left: 240px;
+        top: 673px;
+
+        &:visited{
+        color: $visitedLink ;
+        }
+    }
+
+    .whiteFooter{
+        cursor: pointer;
+        
+        .whiteCircle{
+            position: absolute;
+            @include size (48px, 48px);
+            left: 168px;
+            top: 660px;
+            border-radius: 50%;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.08)
+        }
+
+        #bottom{
+            position: relative;
+            height: 12px;
+            width: 12px;
+            left: 17px;
+            top: 17px;
+        }
+
+        #top{
+            position: relative;
+            height: 6px;
+            width: 6px;
+            left: 9px;
+            top: 9px;
+        }
+    }
+}
