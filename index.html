@@ -37,7 +37,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="dropInfo">
+                <div class="dropInfo ">
                     <img src="./img/png/bg.png" alt="Something went wrong">
                     <div class="whiteBlock">
                         <div class="whiteHeader">
@@ -49,11 +49,17 @@
                             <h2>Кочнева <br>
                             Алина Андреевна</h2>
 
-                            <p>Краткое описание. Например, студент 4 курса специальности «Прикладная информатика» в КузГТУ</p>
+                            <p>Студентка онлайн-школы "Geek brains" по направлению "Front-end разработчик"</p>
                             <span><strong>+7 (913) 433-06-41</strong></span>
                         </div>
 
-                        <a href="https://t.me/kochneva10" target="_blank">Ссылка на соцсеть/мессенджер</a>
+                        <div class="whiteFooter">
+                            <div class="whiteCircle">
+                                <img src="./img/svg/linkBottom.svg" alt="Something went wrong" id="bottom">
+                                <img src="./img/svg/linkTop.svg" alt="Something went wrong" id="top">
+                            </div>
+                            <a href="https://t.me/kochneva10" target="_blank">Ссылка на соцсеть/мессенджер</a>
+                        </div>
 
                     </div>
                 </div>
@@ -105,7 +111,7 @@
                 </div>
 
                 <div class="desktop" id="grid">
-                    <h3>Планшет (736+)</h3>
+                    <h3 class="extraMargin">Планшет (736+)</h3>
                         <table class="tableGrid">
                             <thead class="tableHeader">
                                 <tr>
@@ -129,7 +135,7 @@
                 </div>
 
                 <div class="desktop">
-                    <h3>Телефон (320+)</h3>
+                    <h3 class="extraMargin">Телефон (320+)</h3>
                         <table class="tableGrid">
                             <thead class="tableHeader">
                                 <tr>
@@ -156,9 +162,60 @@
             <div class="typography">
                 <h2>Типографика</h2>
                 <p>Используется шрифт Graphik. На телефонах стили типографики переопределяются</p>
-                <button>Десктоп</button>
-                <button>Телефон</button>
+                <div class="tab">
+                    <button class="deskink"><strong>Десктоп</strong></button>
+                    <button class="mobileLink"><strong>Телефон</strong></button>
+                </div>
                 
+                <div class="typography-content">
+                    <div id="deskVertion" class="tabcontent">
+                        <div class="left">
+                            <p>Заголовок H1, 48/56, bold</p>
+                            <p>Заголовок H2, 32/40, bold</p>
+                            <p>Заголовок H3, 24/32, medium</p>
+                            <p>Заголовок H4, 18/28, medium</p>
+                            <p>Лид P_Lead, 24/32, regular</p>
+                            <p>Крупный текст P_18, 18/28, regular</p>
+                            <p>Основной текст P_16, 16/24, regular</p>
+                            <p>Впомогательный текст P_14, 14/20,<br> regular</p>
+                        </div>
+                        <div class="right">
+                            <h1>Текст заголовка</h1>
+                            <h2>Текст заголовка</h2>
+                            <h3><strong>Текст заголовка</strong></h3>
+                            <h4>Текст заголовка</h4>
+                            <p class="lead">Текст лида</p>
+                            <p class="bigText">Крупный текст</p>
+                            <p class="mainText">Основной текст</p>
+                            <p class="extra">Впомогательный текст</p>
+                        </div>
+
+                    </div>
+                    
+                    <div id="mobileVertion" class="mobileContent">
+                        <div class="left">
+                            <p>Заголовок H1, 32/40, bold</p>
+                            <p>Заголовок H2, 28/36, bold</p>
+                            <p>Заголовок H3, 20/28, medium</p>
+                            <p>Заголовок H4, 18/28, medium</p>
+                            <p>Лид P_Lead, 20/28, regular</p>
+                            <p>Крупный текст P_18, 18/28, regular</p>
+                            <p>Основной текст P_16, 16/24, regular</p>
+                            <p>Впомогательный текст P_14, 14/20,<br> regular</p>
+                        </div>
+
+                        <div class="right">
+                            <h1>Текст заголовка</h1>
+                            <h2>Текст заголовка</h2>
+                            <h3><strong>Текст заголовка</strong></h3>
+                            <h4>Текст заголовка</h4>
+                            <p class="lead">Текст лида</p>
+                            <p class="bigText">Крупный текст</p>
+                            <p class="mainText">Основной текст</p>
+                            <p class="extra">Впомогательный текст</p>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div class="UI">
@@ -171,30 +228,31 @@
                 </div>
 
 
+                <div class="dropList">
+                    <h3>Выпадающий список</h3>
+                    <p>Компонент состоит из текстового поля и выпадающей подсказки</p>
+                    <form>
+                        <div class="select" data-state="">
+                            <div class="selectTitle" data-default="Option 0">Выберите что-нибудь</div>
+                                <div class="selectContent">
+                                    <input id="singleSelect0" class="select-input" type="radio" name="singleSelect" checked>
+                                    <label for="singleSelect0" class="select-label">Первый стул</label>
 
-                <h3>Выпадающий список</h3>
-                <p>Компонент состоит из текстового поля и выпадающей подсказки</p>
-                <form>
-                    <div class="select" data-state="">
-                        <div class="selectTitle" data-default="Option 0">Выберите что-нибудь</div>
-                            <div class="selectContent">
-                                <input id="singleSelect0" class="select-input" type="radio" name="singleSelect" checked>
-                                <label for="singleSelect0" class="select-label">Первый стул</label>
+                                    <input id="singleSelect4" class="select-input" type="radio" name="singleSelect">
+                                    <label for="singleSelect4" class="select-label">Первый стул</label>
 
-                                <input id="singleSelect4" class="select-input" type="radio" name="singleSelect">
-                                <label for="singleSelect4" class="select-label">Первый стул</label>
+                                    <input id="singleSelect1" class="select-input" type="radio" name="singleSelect">
+                                    <label for="singleSelect1" class="select-label">Второй стул</label>
 
-                                <input id="singleSelect1" class="select-input" type="radio" name="singleSelect">
-                                <label for="singleSelect1" class="select-label">Второй стул</label>
+                                    <input id="singleSelect2" class="select-input" type="radio" name="singleSelect">
+                                    <label for="singleSelect2" class="select-label">Выбранный пункт</label>
 
-                                <input id="singleSelect2" class="select-input" type="radio" name="singleSelect">
-                                <label for="singleSelect2" class="select-label">Выбранный пункт</label>
-
-                                <input id="singleSelect3" class="select-input" type="radio" name="singleSelect">
-                                <label for="singleSelect3" class="select-label">Теорема Эскобара</label>
-                            </div>
-                    </div>
-                </form>
+                                    <input id="singleSelect3" class="select-input" type="radio" name="singleSelect">
+                                    <label for="singleSelect3" class="select-label">Теорема Эскобара</label>
+                                </div>
+                        </div>
+                    </form>
+                </div>
 
                 <h3>Кнопка</h3>
                 <button class="UIbutton">Отправить</button>
@@ -310,8 +368,8 @@
                 </div>
             </div>
 
-
         </main>
+
         <footer>
             <p>Победа! &#128540;</p>
         </footer>
