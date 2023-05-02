@@ -33,7 +33,7 @@ BurgerButton.addEventListener('click', () => {
 //при клике на одну из ссылок sidebar страница плавно переместить к началу соответствующего блока
 
 intoLink.addEventListener('click', () => {
-    window.scrollTo({ top: 40, behavior: 'smooth' });
+    window.scrollTo({ top: 35, behavior: 'smooth' });
 })
 
 gridLink.addEventListener('click', () => {
@@ -41,11 +41,11 @@ gridLink.addEventListener('click', () => {
 })
 
 typographyLink.addEventListener('click', () => {
-    window.scrollTo({ top: 2485, behavior: 'smooth' })
+    window.scrollTo({ top: 2475, behavior: 'smooth' })
 })
 
 UILink.addEventListener('click', () => {
-    window.scrollTo({ top: 2700, behavior: 'smooth' })
+    window.scrollTo({ top: 2728, behavior: 'smooth' })
 })
 
 //Добавление функций клика для аккордиона
