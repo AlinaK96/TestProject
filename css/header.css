@@ -27,7 +27,7 @@
   margin-left: 64px;
 }
 .profile .name p {
-  margin: 0;
+  margin-left: 64px;
   font-size: 14px;
   line-height: 20px;
 }
@@ -92,16 +92,17 @@
 .dropInfo.active img {
   position: absolute;
   top: 0px;
-  left: 0;
+  left: 64px;
+  margin-right: 64px;
   height: 756px;
-  width: 1344px;
+  max-width: 1344px;
   z-index: 5;
 }
 .dropInfo.active .whiteBlock {
   position: absolute;
   height: 740px;
   width: 760px;
-  left: 8px;
+  left: 72px;
   top: 8px;
   background-color: white;
   z-index: 5;
