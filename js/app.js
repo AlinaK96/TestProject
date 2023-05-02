@@ -9,6 +9,11 @@ const UILink = document.querySelector('#UIlink')
 const accordions = document.querySelectorAll('.contentAccordion');
 const label = document.querySelectorAll('.label');
 
+//кнопки выпадащего списка
+const selectSingle = document.querySelector('.select');
+const selectSingle_title = selectSingle.querySelector('.selectTitle');
+const selectSingle_labels = selectSingle.querySelectorAll('.select-label');
+
 //работа с кнопкой меню (добавление класса active для двух элиментов, которые будут менять своё положение и цвет)
 
 BurgerButton.addEventListener('click', () => {
@@ -53,4 +58,25 @@ function clearActiveClasses() {
     accordions.forEach((accordion) => {
         accordion.classList.remove('active')
     })
+}
+
+
+
+
+
+// выпадащий список
+selectSingle_title.addEventListener('click', () => {
+    if ('active' === selectSingle.getAttribute('data-state')) {
+        selectSingle.setAttribute('data-state', '');
+    } else {
+        selectSingle.setAttribute('data-state', 'active');
+    }
+});
+
+// выбор слайда по клику 
+for (let i = 0; i < selectSingle_labels.length; i++) {
+    selectSingle_labels[i].addEventListener('click', (evt) => {
+        selectSingle_title.textContent = evt.target.textContent;
+        selectSingle.setAttribute('data-state', '');
+    });
 }
