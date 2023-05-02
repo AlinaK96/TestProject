@@ -24,7 +24,7 @@ body{
 .container{
     height: 100vh;
     display: grid;
-    grid-template-columns: 300px 1fr;
+    grid-template-columns: 280px 1fr;
     grid-template-rows: 88px 1fr 120px;
     grid-gap: 32px;
     grid-template-areas:
@@ -32,6 +32,7 @@ body{
         "aside main"
         "footer footer";
 }
+
 
 header {
     grid-area: header;
@@ -73,7 +74,7 @@ main {
 
     h3{
         @include fontSize (24px, 32px);
-        @include margin (64px,32px);
+        @include margin (48px,32px);
         font-weight: 500;
     }
 
@@ -90,6 +91,10 @@ main {
     .desktop{
         margin-top: 48px;
     }
+
+    .extraMargin{
+        margin-top: 64px;
+    }
 }
 
 /*таблица разметки grid*/
@@ -99,12 +104,13 @@ main {
     @include margin (32px, 48px);
 
     .tableHeader {
+        margin-bottom: 8px;
         td{
         @include size (20px, 176px);
         @include fontSize (14px, 20px);
         font-weight:  normal;
         color: $greyText;
-    }
+        }
     }
     .tableBody {
         td{
@@ -113,5 +119,15 @@ main {
             font-weight:  normal;
             color: $blackFont;
         }
+    }
+}
+
+.typography{
+    margin-top: 80px;
+
+    p{
+        @include size (48px, 592px);
+        @include fontSize (16px, 24px);
+        margin-bottom: 48px;
     }
 }

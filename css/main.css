@@ -21,8 +21,8 @@ body {
   height: 100vh;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 300px 32px 1fr;
-  grid-template-columns: 300px 1fr;
+  -ms-grid-columns: 280px 32px 1fr;
+  grid-template-columns: 280px 1fr;
   -ms-grid-rows: 88px 32px 1fr 32px 120px;
   grid-template-rows: 88px 1fr 120px;
   grid-gap: 32px;
@@ -79,7 +79,7 @@ main h2 {
 main h3 {
   font-size: 24px;
   line-height: 32px;
-  margin-top: 64px;
+  margin-top: 48px;
   margin-bottom: 32px;
   font-weight: 500;
 }
@@ -95,11 +95,17 @@ main .adaptive img {
 main .desktop {
   margin-top: 48px;
 }
+main .extraMargin {
+  margin-top: 64px;
+}
 
 /*таблица разметки grid*/
 .tableGrid {
   margin-top: 32px;
   margin-bottom: 48px;
+}
+.tableGrid .tableHeader {
+  margin-bottom: 8px;
 }
 .tableGrid .tableHeader td {
   height: 20px;
@@ -116,4 +122,15 @@ main .desktop {
   line-height: 32px;
   font-weight: normal;
   color: #1B1B1B;
+}
+
+.typography {
+  margin-top: 80px;
+}
+.typography p {
+  height: 48px;
+  width: 592px;
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 48px;
 }
