@@ -1,6 +1,7 @@
 //переменные
 const BurgerButton = document.querySelector('.burger-menu')
 const BurgerSpan = document.querySelector('.menu-span')
+const InfoBlock = document.querySelector(".dropInfo")
 
 const intoLink = document.querySelector ('#startWord')
 const gridLink = document.querySelector("#gridLink")
@@ -19,6 +20,7 @@ const selectSingle_labels = selectSingle.querySelectorAll('.select-label');
 BurgerButton.addEventListener('click', () => {
     BurgerButton.classList.toggle('active')
     BurgerSpan.classList.toggle('active')
+    InfoBlock.classList.toggle('active')
 })
 
 //якоря 
