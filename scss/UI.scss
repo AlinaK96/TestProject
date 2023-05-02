@@ -1,0 +1,400 @@
+@import "variables";
+@import "mixins";
+
+/*стилизация различного состояния inputa email*/
+
+.email {
+    position: relative;
+
+    p{
+        display: none;
+    }
+}
+
+#email{
+    @include fontSize (16px, 24px);
+    @include size (24px, 280px);
+    border: transparent;
+    border-bottom: 2px solid $greyLine;
+    cursor: pointer;
+}
+
+#email:hover{
+    border-bottom: 2px solid $visitedLink;
+}
+
+#email:focus{
+    border-bottom: 4px solid $visitedLink;
+    outline: none;
+}
+
+.email label {
+    position: absolute;
+    left:0px;
+    top: 0;
+    @include fontSize (12px, 20px);
+    color: $greyText;
+    transition: all 0.2s;
+    overflow: hidden;
+    white-space: nowrap;
+    z-index: 1;
+    opacity: 0;
+}
+
+.email input:focus + label {
+    opacity: 1;
+    top: -18px;  
+}
+
+#email.error{
+    border-bottom: 4px solid $error;
+}
+
+.errorText{
+    display: inline;
+    @include fontSize (14px, 20px);
+    color: $error;
+    margin-top: 6px;
+}
+
+//Выпадающий список
+
+.select{
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    border: none;
+    border-bottom: 2px solid $greyLine;
+    background-color: transparent;
+    outline: none;
+    width: 280px;
+    padding-bottom: 6px;
+    cursor: pointer;
+    @include fontSize (16px, 24px);
+    margin-top: 48px;
+}
+
+.select::-ms-expand{
+    display: none;
+}
+
+.select-wrapper{
+    img{
+        position: relative;
+        left: -15px;
+        pointer-events: none;
+    }
+}
+
+.select:hover{
+    border-bottom: 2px solid $visitedLink;
+
+}
+
+
+//Кнопка "отправить"
+
+.UIbutton{
+    @include size (56px, 148px);
+    letter-spacing: 1px;
+    background: linear-gradient(45deg, #DD80ED 0%, #3D28E3 100%);
+    border-radius: 32px;
+    border: transparent;
+    color: white;
+    cursor: pointer;
+}
+
+.UIbutton:hover{
+    background: linear-gradient(225deg, #DD80ED 0%, #3D28E3 100%);
+    transition: all 0.1s ease-in 0s;
+}
+
+.UIbutton:active{
+    background: linear-gradient(206.57deg, #DD80ED 0%, #3D28E3 83.33%);
+}
+
+.UIbutton:disabled{
+    background: #CBCBCC;
+}
+
+//Чекбокс, радиобаттон
+
+.choose{
+    height: 145px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+        "chekbox radio"
+}
+
+//div с вариантами checkbox - обнулили
+
+.check{
+    @include size (0px, 0px);
+    opacity: 0;
+    z-index: -1;
+}
+
+//новый вид чекбокса
+.custom-checkbox{
+    position: relative;
+    top: -25px;
+    display: block;
+    @include size (24px, 24px);
+    grid-area: chekbox ;
+    cursor: pointer;
+    border: 2px solid $greyLine;
+}
+
+
+.custom-checkbox::before{
+    content: '';
+    display: block;
+    @include size (24px, 24px);
+    background-image: url('../img/svg/tick.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: $visitedLink;
+    border: 2px solid $visitedLink;
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: $transition;
+}
+
+.check:checked + .custom-checkbox::before{
+    transform: translate(-50%, -50%) scale(1);
+
+    .labelType{
+        opacity: 1;
+    }
+}
+
+
+.labelType {
+    @include fontSize (16px, 24px);
+    opacity: 0.8;
+    cursor: pointer;
+    margin-left: 49px;
+}
+
+.labelType:hover,
+.labelType:focus{
+    opacity: 1;
+
+    .custom-checkbox{
+        border: 2px solid $visitedLink;
+    }
+
+    .custom-radio{
+        border: 2px solid $visitedLink;
+
+    }
+}
+
+//radio button
+
+.radio{
+    grid-area: radio;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+//настоящая кнопка
+.radioOption{
+    @include size (0px, 0px);
+    opacity: 0;
+    z-index: -1;
+}
+
+//кастомная радио кнопка
+.custom-radio{
+    position: relative;
+    top: -5px;
+    display: inline-block;
+    @include size (24px, 24px);
+    background-color: white;
+    border: 2px solid $greyLine;
+    border-radius: 50%;
+    margin-right: 16px;
+    margin-bottom: 24px;
+    vertical-align: text-top;
+}
+
+.custom-radio::before{
+    position: absolute;
+    content: '';
+    display: inline-block;
+    @include size (12px, 12px);
+    background-color: $visitedLink;
+    border: 2px solid $visitedLink;
+
+    border-radius: 50%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+.radioOption:checked + .custom-radio::before{
+    display: block;
+    .custom-radio{
+        border: 2px solid $visitedLink;
+    }
+}
+
+
+  
+//   .__select {
+//     position: relative;
+//     width: 230px;
+//     height: 40px;
+//     margin: 0 auto;
+  
+//     &[data-state="active"] {
+//       .__select__title {
+//         &::before {
+//           transform: translate(-3px, -50%) rotate(-45deg);
+//         }
+  
+//         &::after {
+//           transform: translate(3px, -50%) rotate(45deg);
+//         }
+//       }
+      
+//       .__select__content {
+//         opacity: 1;
+//       }
+      
+//       .__select__label + .__select__input + .__select__label {
+//         max-height: 40px;
+//         border-top-width: 1px;
+//       }
+//     }
+//   }
+//   .__select__title {
+//     display: flex;
+//     align-items: center;
+//     width: 100%;
+//     height: 100%;
+//     padding: 8px 16px;
+  
+//     border-radius: 5px;
+//     border: solid 1px #c7ccd1;
+    
+//     cursor: pointer;
+  
+//     &::before,
+//     &::after {
+//       content: "";
+  
+//       position: absolute;
+//       top: 50%;
+//       right: 16px;
+  
+//       display: block;
+//       width: 10px;
+//       height: 2px;
+  
+//       transition: all 0.3s ease-out;
+  
+//       background-color: #333333;
+  
+//       transform: translate(-3px, -50%) rotate(45deg);
+//     }
+//     &::after {
+//       transform: translate(3px, -50%) rotate(-45deg);
+//     }
+  
+//     &:hover {
+//       border-color: #D8093A;
+  
+//       &::before,
+//       &::after {
+//         background-color: #D8093A;
+//       }
+//     }
+//   }
+//   .reset {
+//     display: flex;
+//     width: 230px;
+//     padding: 8px 16px;
+//     margin: 0 auto;
+//     margin-bottom: 10px;
+    
+//     border: solid 1px #c7ccd1;
+//     border-radius: 5px;
+    
+//     transition: all 0.2s ease-out;
+    
+//     cursor: pointer;
+    
+//     font-weight: bold;
+    
+//     background-color: #ffffff;
+//     color: #333333;
+    
+//     &:hover {
+//       background-color: #D8093A;
+//       color: #ffffff;
+//     }
+//   }
+//   .__select__content {
+//     position: absolute;
+//     top: 40px;
+//     left: 3px;
+  
+//     display: flex;
+//     flex-direction: column;
+//     width: calc(100% - 6px);
+  
+//     background-color: #ffffff;
+  
+//     border: 1px solid #c7ccd1;
+//     border-top: none;
+//     border-bottom-left-radius: 5px;
+//     border-bottom-right-radius: 5px;
+    
+//     transition: all 0.3s ease-out;
+  
+//     opacity: 0;
+//     z-index: 8;
+//   }
+//   .__select__input {
+//     display: none;
+  
+//     &:checked + label {
+//       background-color: #dedede;
+//     }
+//     &:disabled + label {
+//       opacity: 0.6;
+//       pointer-events: none;
+//     }
+//   }
+//   .__select__label {
+//     display: flex;
+//     align-items: center;
+//     width: 100%;
+//     height: 40px;
+//     max-height: 0;
+//     padding: 0 16px;
+    
+//     transition: all 0.2s ease-out;
+  
+//     cursor: pointer;
+    
+//     overflow: hidden;
+  
+//     & + input + & {
+//       border-top: 0 solid #C7CCD160;
+//     }
+  
+//     &:hover {
+//       background-color: #D8093A !important;
+  
+//       color: #ffffff;
+//     }
+//   }
