@@ -142,24 +142,17 @@
 
 .check:checked + .custom-checkbox::before{
     transform: translate(-50%, -50%) scale(1);
-
-    .labelType{
-        opacity: 1;
-    }
 }
 
 
 .labelType {
     @include fontSize (16px, 24px);
-    opacity: 0.8;
     cursor: pointer;
     margin-left: 49px;
 }
 
 .labelType:hover,
 .labelType:focus{
-    opacity: 1;
-
     .custom-checkbox{
         border: 2px solid $visitedLink;
     }
@@ -441,6 +434,7 @@ form{
     overflow: hidden;
     width: 904px;
     border-bottom: 1px solid $accordionLine;
+    margin-top: 48px;
 }
 
   /* Кнопки для открытия tab */

@@ -15,7 +15,7 @@ html {
 body{
     font-family: $font;
     height: 100vh;
-    margin: 32px 64px;
+    margin: 32px 0px;
 
 }
 
@@ -67,6 +67,7 @@ footer {
 }
 
 main {
+    margin-right: 64px;
     h2{
         @include fontSize (32px, 40px);
         @include margin (80px, 24px);
@@ -124,10 +125,4 @@ main {
 
 .typography{
     margin-top: 80px;
-
-    p{
-        @include size (48px, 592px);
-        @include fontSize (16px, 24px);
-        margin-bottom: 48px;
-    }
 }

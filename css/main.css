@@ -13,7 +13,7 @@ html {
 body {
   font-family: Graphik;
   height: 100vh;
-  margin: 32px 64px;
+  margin: 32px 0px;
 }
 
 /*разметка grid*/
@@ -70,6 +70,9 @@ footer {
   font-weight: normal;
 }
 
+main {
+  margin-right: 64px;
+}
 main h2 {
   font-size: 32px;
   line-height: 40px;
@@ -126,11 +129,4 @@ main .extraMargin {
 
 .typography {
   margin-top: 80px;
-}
-.typography p {
-  height: 48px;
-  width: 592px;
-  font-size: 16px;
-  line-height: 24px;
-  margin-bottom: 48px;
 }
