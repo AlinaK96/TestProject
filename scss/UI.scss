@@ -246,6 +246,69 @@
     }
 }
 
+//Аккордеон
+
+.accordion{
+    color: black;
+    background-color: white;
+    cursor: pointer;
+    width: 904px;
+
+
+    .label{
+        @include fontSize (16px, 24px);
+        color: $greyText;
+    }
+
+    .contentAccordion{
+        box-sizing: border-box;
+        @include margin (24px, 15px);
+        border-bottom: 1px solid $accordionLine;
+        height: 48px;
+        transition: $transition;
+
+    }
+
+    .content{
+        position: relative;
+        height: 0;
+        overflow: hidden;
+        transition: $transition;
+        @include fontSize (16px, 24px);
+        @include margin (24px, 30px);
+    }
+
+    .accordionHeader{
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.contentAccordion:hover{
+    border-bottom: 1px solid $visitedLink;
+
+    .label{
+        color: $blackFont;
+    }
+}
+
+.contentAccordion.active{
+    border-bottom: 2px solid $visitedLink;
+    height: 294px;
+
+    .label{
+        color: $visitedLink;
+    }
+
+    .content{
+        height: 294px;
+    }
+
+    img{
+        transform: rotate(180deg);
+    }
+
+}
 
   
 //   .__select {
