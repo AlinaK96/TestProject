@@ -1,6 +1,9 @@
 Тестовое задание для junior front-end разработчика <br>
 Макет: https://www.figma.com/file/3kDJzdzV1G1V3AKHMrZKEJ/тест?type=design&node-id=0-2&t=EwC68Z57zLpH64u7-0 <br>
 
+![Вид:](./img/png/final.png)
+
+
 Список задач: <br>
 
 - Адаптивная верстка всех блоков согласно «сетке» макета. В зависимости от разрешения экрана устройства последняя может быть:  <br>

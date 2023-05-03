@@ -179,12 +179,12 @@
   height: 12px;
   width: 12px;
   left: 17px;
-  top: 17px;
+  top: 20px;
 }
 .dropInfo.active .whiteFooter #top {
   position: relative;
   height: 6px;
   width: 6px;
-  left: 9px;
-  top: 9px;
+  left: 25px;
+  top: -5px;
 }
